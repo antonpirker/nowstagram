@@ -83,6 +83,7 @@ DATABASES = {
         'PASSWORD': 'Welcome123!',
         'HOST': 'SG-nowstagram-22120.servers.mongodirector.com',
         'PORT': '6432',
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 
