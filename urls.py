@@ -7,3 +7,6 @@ urlpatterns = [
     path('about', about),
     path('api/', include('api.urls')),
 ]
+
+from django.core.management import call_command
+call_command('migrate')
