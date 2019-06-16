@@ -1,13 +1,19 @@
-"""URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
-"""
 from django.urls import path
-from django.http import HttpResponse
-from views import index, about
+from rest_framework import viewsets
+from rest_framework.response import Response
+
+from views import about, index
+
+
+class PostViewSet(viewsets.ViewSet):
+    def list(self, request):
+        resp = Response({"blub": "list"})
+        return resp
+
+post_list = PostViewSet.as_view({'get': 'list'})
 
 urlpatterns = [
     path('', index),
     path('about', about),
+    path('api/posts/', post_list),
 ]
