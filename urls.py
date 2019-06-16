@@ -6,6 +6,9 @@ from views import about, index
 
 
 class PostViewSet(viewsets.ViewSet):
+    def get_queryset(self):
+        return []
+
     def list(self, request):
         resp = Response({"blub": "list"})
         return resp
