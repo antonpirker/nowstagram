@@ -77,8 +77,12 @@ TEMPLATES = [
 
 DATABASES = {
     'default': {
-        'ENGINE': '',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nowstagram',
+        'USER': 'nowstagram',
+        'PASSWORD': 'Welcome123!',
+        'HOST': 'SG-nowstagram-22120.servers.mongodirector.com',
+        'PORT': '6432',
     }
 }
 
